@@ -1,0 +1,1 @@
+CREATE INDEX "program_category_id_idx" ON "program" ("category_id");

@@ -1,0 +1,30 @@
+{
+  "name": "@repo/auth",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+ 
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "tsup": "^8.5.1",
+    "zod": "^4.6.5"
+  },
+  "dependencies": {
+    "@repo/db": "workspace:*",
+    "better-auth": "^1.7.7"
+  }
+}

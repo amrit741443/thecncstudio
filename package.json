@@ -10,15 +10,22 @@
     "typecheck": "turbo typecheck"
   },
   "devDependencies": {
-    "@workspace/eslint-config": "workspace:*",
-    "@workspace/typescript-config": "workspace:*",
+    "@types/pg": "",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "drizzle-kit": "rc",
     "prettier": "^3.9.9",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "tsx": "",
     "turbo": "^2.11.5",
     "typescript": "^5"
   },
   "packageManager": "pnpm@11.25.0",
   "engines": {
     "node": ">=20.9.0"
-  }
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }

@@ -1,0 +1,1 @@
+CREATE DATABASE thecncstudio_db;
