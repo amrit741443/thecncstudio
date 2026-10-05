@@ -2,7 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import {
   type ProgramCategory,
   ProgramCategoriesRepository,
-} from './program-repositories.js';
+} from './program-categories.repositories.js';
 import { ListProgramCategoriesDto } from './dto/list-program-categories.dto.js';
 import { CreateProgramCategoryDto } from './dto/create-program-category.dto.js';
 import { Paginated, paginated } from '@/common/pagination.js';
