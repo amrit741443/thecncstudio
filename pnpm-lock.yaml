@@ -7864,7 +7864,7 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 20.19.41
+      '@types/node': 24.19.0
 
   '@types/cookiejar@2.1.5': {}
 
@@ -7949,7 +7949,7 @@ snapshots:
 
   '@types/send@1.2.1':
     dependencies:
-      '@types/node': 20.19.41
+      '@types/node': 24.19.0
 
   '@types/serve-static@2.2.0':
     dependencies:
@@ -9435,15 +9435,12 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.2.15
 
-<<<<<<< Updated upstream
-=======
   lucide-react@1.52.0(@types/react@19.2.15)(react@19.3.0):
     dependencies:
       react: 19.3.0
     optionalDependencies:
       '@types/react': 19.2.15
 
->>>>>>> Stashed changes
   magic-string@0.30.21:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.6.0
