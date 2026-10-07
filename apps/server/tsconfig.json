@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+<<<<<<< Updated upstream
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+=======
+    "module": "esnext",
     "moduleResolution": "bundler",
+>>>>>>> Stashed changes
       "paths": {
       "@/*": ["./src/*"]
     },

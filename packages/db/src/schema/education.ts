@@ -109,7 +109,7 @@ export const course = t.pgTable(
 
     name: t.varchar("name", { length: 150 }).notNull(),
 
-    slug: t.varchar("slug", { length: 180 }).notNull().unique(),
+    slug: t.varchar("slug", { length: 180 }).notNull(),
 
     description: t.text("description"),
 
@@ -136,6 +136,7 @@ export const course = t.pgTable(
       .defaultNow(),
   },
   (table) => [
+    t.unique("program_slug_unique").on(table.programId, table.slug),
     t.index("course_program_id_idx").on(table.programId),
     t.check(
       "course_duration_weeks_check",

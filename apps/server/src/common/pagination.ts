@@ -1,13 +1,13 @@
 import { Type } from 'class-transformer';
 import { IsInt, IsOptional, Max, Min } from 'class-validator';
 
-export class PaginationDto {
+export class PaginationQueryDto {
   @IsOptional()
   @Type(() => Number)
   @IsInt()
   @Min(1)
   @Max(100)
-  limit?: number = 20;
+  limit: number = 20;
 
   @IsOptional()
   @Type(() => Number)
@@ -24,11 +24,7 @@ export interface Paginated<T> {
 export function paginated<T>(
   data: T[],
   total: number,
-  limit: number,
-  offset: number,
+  q: PaginationQueryDto,
 ): Paginated<T> {
-  return {
-    data,
-    meta: { total, limit, offset },
-  };
+  return { meta: { total, limit: q.limit, offset: q.offset }, data };
 }
