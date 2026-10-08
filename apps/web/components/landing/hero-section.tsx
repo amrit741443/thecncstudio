@@ -19,6 +19,7 @@ import {
   Video,
 } from "lucide-react"
 import { CollaborateButton } from "../global/cta-button"
+import Image from "next/image"
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -98,12 +99,12 @@ function Counter({
 
 export function HeroSection() {
   return (
-    <div className="mt-24 w-full">
+    <div className="w-full py-28">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="grid w-full grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-8"
+        className="grid w-full grid-cols-1 items-center justify-center gap-10 lg:grid-cols-12 lg:gap-8"
       >
         {/* Left Column Content */}
         <div className="w-full space-y-6 text-left lg:col-span-6">
@@ -201,12 +202,15 @@ export function HeroSection() {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative overflow-hidden rounded-3xl border-2 border-white shadow-2xl shadow-slate-900/10 sm:border-4 dark:border-slate-900 dark:bg-slate-600"
+              className="relative aspect-[4/3] min-h-[420px] w-full overflow-hidden rounded-3xl border-2 border-white shadow-2xl shadow-slate-900/10 sm:aspect-[16/10] sm:min-h-[520px] sm:border-4 lg:aspect-[1/1] lg:min-h-[600px] xl:aspect-[4/3] xl:min-h-[640px] dark:border-slate-900 dark:bg-slate-600"
             >
-              <img
-                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
+              <Image
+                src="/banner.png"
                 alt="Students building VEX robotics at The CNC Studio"
-                className="h-[320px] w-full object-cover object-center sm:h-[460px]"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                className="object-cover object-center"
               />
 
               {/* Gradient Overlay */}
@@ -220,7 +224,7 @@ export function HeroSection() {
                   </span>
                 </div>
                 <h3 className="font-heading text-sm font-bold tracking-tight text-white sm:text-lg">
-                  Autonomous Robotics & Micro-Sensors Lab
+                  Robotics & Micro-Sensors Lab
                 </h3>
                 <p className="mt-0.5 hidden text-xs text-slate-300 sm:block">
                   Hands-on hardware prototyping & visual telemetry
@@ -231,7 +235,7 @@ export function HeroSection() {
             {/* FLOATING CARD 1: Top-Left Review Badge */}
             <motion.div
               //   {...floatAnimation(0, 8)}
-              className="absolute -top-4 left-2 z-20 flex max-w-[200px] items-center gap-2.5 rounded-2xl border border-slate-100 bg-background p-2.5 shadow-sm backdrop-blur-md sm:-top-8 sm:-left-6 sm:max-w-[240px] sm:gap-3 sm:p-3.5 dark:border-slate-700"
+              className="absolute -top-8 left-2 z-20 flex max-w-[200px] items-center gap-2.5 rounded-2xl border border-slate-100 bg-background p-2.5 shadow-sm backdrop-blur-md sm:-top-8 sm:-left-6 sm:max-w-[240px] sm:gap-3 sm:p-3.5 dark:border-slate-700"
             >
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-amber-100/15 text-amber-500 sm:h-9 sm:w-9">
                 <Star className="h-4 w-4 fill-amber-400 sm:h-5 sm:w-5" />
@@ -255,7 +259,7 @@ export function HeroSection() {
             {/* FLOATING CARD 2: Middle-Right Surge Badge */}
             <motion.div
               //   {...floatAnimation(1.5, 10)}
-              className="absolute top-1/2 -right-2 z-20 flex -translate-y-1/2 items-center gap-2.5 rounded-2xl border border-slate-100 bg-background p-2.5 shadow-sm backdrop-blur-md sm:-right-6 sm:gap-3 sm:p-3.5 dark:border-slate-700"
+              className="absolute top-2/6 -right-2 z-20 flex -translate-y-1/2 items-center gap-2.5 rounded-2xl border border-slate-100 bg-background p-2.5 shadow-sm backdrop-blur-md sm:-right-6 sm:gap-3 sm:p-3.5 dark:border-slate-700"
             >
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-blue-300/15 sm:h-10 sm:w-10">
                 <Zap className="h-4 w-4 fill-primary text-primary sm:h-5 sm:w-5" />
@@ -273,8 +277,8 @@ export function HeroSection() {
 
             {/* FLOATING CARD 3: Bottom-Left Cohort Badge */}
             <motion.div
-              //   {...floatAnimation(2.5, 6)}
-              className="absolute -bottom-5 left-3 z-20 flex items-center gap-2.5 rounded-2xl border border-slate-100 bg-background px-3 py-2 shadow-xl backdrop-blur-md sm:-bottom-6 sm:left-6 sm:gap-3 sm:px-4 sm:py-3 dark:border-slate-700"
+              // {...floatAnimation(2.5, 6)}
+              className="absolute right-3 -bottom-5 z-20 flex items-center gap-2.5 rounded-2xl border border-slate-100 bg-background px-3 py-2 shadow-xl backdrop-blur-md sm:right-6 sm:-bottom-6 sm:gap-3 sm:px-4 sm:py-3 dark:border-slate-700"
             >
               <div className="relative h-2.5 w-2.5 shrink-0 rounded-full bg-blue-600 sm:h-3 sm:w-3">
                 <div className="absolute inset-0 h-full w-full animate-ping rounded-full bg-blue-600" />

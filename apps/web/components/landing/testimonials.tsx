@@ -140,7 +140,7 @@ const ReviewCard = ({
 
 export function Testimonial() {
   return (
-    <div className="my-24 flex flex-col gap-16">
+    <div className="flex flex-col gap-16 py-24">
       <Title
         title="What Parents Say About Us"
         subTitle="Hear directly from the families who have seen their children's confidence and communication skills soar through our program.

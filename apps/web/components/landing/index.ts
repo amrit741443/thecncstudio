@@ -1,2 +1,6 @@
 export * from "./fqa"
 export * from "./hero-section"
+export * from "./testimonials"
+export * from "./trust"
+export * from "./cta-banner"
+export * from "./team-member"

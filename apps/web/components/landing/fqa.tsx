@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@repo/ui/components/accordion"
+import { Title } from "../global/title"
 
 const items = [
   {
@@ -24,15 +25,20 @@ const items = [
 ]
 
 export const Fqa = () => (
-  <div className="flex w-full max-w-lg items-center justify-center">
-    <Accordion defaultValue={["item-0"]} className="w-full space-y-2">
+  <div className="flex w-full flex-col items-center justify-center gap-16 py-24">
+    <Title
+      title="Frequently Asked Questions"
+      subTitle="Everything you need to know about our Skill Development programs."
+    />
+
+    <Accordion defaultValue={["item-0"]} className="w-full space-y-4">
       {items.map((item, index) => (
         <AccordionItem
           key={index}
           value={`item-${index}`}
-          className="rounded-lg border!"
+          className="rounded-lg border transition-colors"
         >
-          <AccordionTrigger className="cursor-pointer items-center bg-accent px-4 py-3 hover:no-underline aria-expanded:rounded-b-none">
+          <AccordionTrigger className="cursor-pointer items-center bg-accent px-4 py-5 hover:font-semibold hover:no-underline aria-expanded:rounded-b-none [&[data-state=open]>svg]:text-primary">
             {item.title}
           </AccordionTrigger>
           <AccordionContent className="px-5 pt-4 text-muted-foreground">

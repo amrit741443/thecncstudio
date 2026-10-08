@@ -1,11 +1,32 @@
 import { MaxWidthWrapper } from "@/components/global/max-width-wrapper"
-import { HeroSection, Fqa } from "@/components/landing"
+import {
+  HeroSection,
+  Fqa,
+  Testimonial,
+  TrustedBySection,
+  CtaBannerSection,
+  TeamSection,
+} from "@/components/landing"
 
 export default function Page() {
   return (
-    <MaxWidthWrapper>
-      <HeroSection />
-      {/* <Fqa /> */}
-    </MaxWidthWrapper>
+    <div className="">
+      <MaxWidthWrapper>
+        <HeroSection />
+      </MaxWidthWrapper>
+
+      <TrustedBySection />
+
+      <TeamSection />
+
+      <MaxWidthWrapper>
+        <Testimonial />
+      </MaxWidthWrapper>
+
+      <MaxWidthWrapper>
+        <Fqa />
+        <CtaBannerSection />
+      </MaxWidthWrapper>
+    </div>
   )
 }

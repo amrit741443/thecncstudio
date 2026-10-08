@@ -12,7 +12,7 @@ import { TooltipProvider } from "@repo/ui/components/tooltip"
 import { ThemeProvider } from "@/components/theme-provider"
 
 import { cn } from "@repo/ui/lib/utils"
-import { Navbar } from "@/components/global/navbar"
+import { Navbar, FooterSection } from "@/components/global"
 
 const spaceGroteskHeading = Space_Grotesk({
   subsets: ["latin"],
@@ -47,6 +47,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           <TooltipProvider>{children}</TooltipProvider>
+          <FooterSection />
         </ThemeProvider>
       </body>
     </html>
