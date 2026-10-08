@@ -15,7 +15,7 @@ import {
   NavigationMenuList,
 } from "@repo/ui/components/navigation-menu"
 import { cn } from "@repo/ui/lib/utils"
-import { ArrowUpRight, Menu } from "lucide-react"
+import { LogIn, Menu } from "lucide-react"
 import { useCallback, useEffect, useState } from "react"
 import Link from "next/link"
 import Search from "./search-command"
@@ -62,7 +62,7 @@ export const Navbar = () => {
   }, [handleScroll, handleResize])
 
   return (
-    <header className="relative w-full py-3.5">
+    <header className="relative w-full bg-background/60">
       <MaxWidthWrapper>
         <nav
           className={cn(
@@ -166,7 +166,15 @@ export const Navbar = () => {
                     </nav>
                   </div>
 
-                  <div className="border-t border-border pt-4">
+                  <div className="flex flex-col gap-2 border-t border-border px-2 py-4">
+                    <Button
+                      size={"lg"}
+                      variant={"outline"}
+                      className={"rounded-full"}
+                    >
+                      <LogIn /> Log In
+                    </Button>
+
                     <CollaborateButton
                       className="w-full justify-center"
                       label="Book a demo"
