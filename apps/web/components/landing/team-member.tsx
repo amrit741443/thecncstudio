@@ -18,32 +18,28 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: "Ayaan Rahman",
     role: "Lead Robotics Mentor",
     company: "The CNC Studio",
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+    image: "/teams/01.png",
     bgColor: "bg-[#D8F276]", // Bright Lime Green
   },
   {
     name: "Kristin Watson",
     role: "Full-Stack Dev Instructor",
     company: "The CNC Studio",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+    image: "/teams/02.png",
     bgColor: "bg-[#E6DEC8]", // Warm Beige
   },
   {
     name: "Floyd Miles",
     role: "Public Speaking Coach",
     company: "The CNC Studio",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
+    image: "/teams/03.png",
     bgColor: "bg-[#719F80]", // Muted Sage Green
   },
   {
     name: "Sara Hossain",
     role: "Digital Arts Lead",
     company: "The CNC Studio",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80",
+    image: "/teams/04.png",
     bgColor: "bg-[#FAD689]", // Warm Pastel Yellow
   },
 ]
@@ -97,7 +93,7 @@ export function TeamSection() {
               <div
                 className={`relative aspect-[3/4] w-full overflow-hidden rounded-3xl ${member.bgColor} shadow-sm transition-transform duration-300 group-hover:-translate-y-1 group-hover:shadow-md`}
               >
-                <img
+                <Image
                   src={member.image}
                   alt={member.name}
                   fill
